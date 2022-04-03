@@ -1,0 +1,13 @@
+function solve(input, input1){
+  let arrInput = input;
+  let numberOfRoation = input1;
+  
+  for (let i = 0; i < numberOfRoation; i++) {
+ 
+   let numberToMove = arrInput.shift();
+   arrInput.push(numberToMove);
+  }
+  console.log(arrInput.join(' '));
+}
+
+solve([51, 47, 32, 61, 21], 2);
