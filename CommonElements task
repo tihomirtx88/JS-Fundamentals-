@@ -1,0 +1,17 @@
+function solve(input1, input2) {
+    let firsInputArr = input1;
+    let secoundInputArr = input2;
+    let firstL = firsInputArr.length;
+    let secoundL = secoundInputArr.length;
+
+    for (let i = 0; i < firstL; i++) {
+        let firstArrElement = firsInputArr[i];
+        if (firsInputArr.includes(firstArrElement) && secoundInputArr.includes(firstArrElement)) {
+            console.log(firstArrElement);
+        }
+    }
+}
+solve(
+    ['Hey', 'hello', 2, 4, 'Peter', 'e'],
+    ['Petar', 10, 'hey', 4, 'hello', '2']
+);
