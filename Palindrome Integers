@@ -1,0 +1,20 @@
+function solve(inputArr){
+    let arrOfNumbers = inputArr;
+    let isPalindrom = (num) =>{//123 join(' ') == '123'.split('').reverse
+       let startNum = num;
+       let reverseNum = Number(num.toString().split('').reverse().join(''));
+       if (startNum === reverseNum) {
+           return true;
+       }
+       else{
+           return false;
+       }
+    }
+    
+    for (let i = 0; i < arrOfNumbers.length; i++) {
+       let currentNumber = arrOfNumbers[i];
+       console.log(isPalindrom(currentNumber));
+    }
+}
+
+solve([123,323,421,121]);
