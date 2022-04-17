@@ -1,0 +1,24 @@
+function solve(sequence, bombPower){
+    let specialNumber = bombPower[0];
+    let specialBombPower = bombPower[1];
+
+    while (sequence.includes(specialNumber)) {
+        let index = sequence.indexOf(specialNumber);
+        
+        let elementsToRemove = specialBombPower * 2 + 1;
+        
+        let startIndex = index - specialBombPower;
+        
+
+        if (startIndex < 0) {
+            elementsToRemove+= startIndex;
+            startIndex = 0;
+        }
+
+        sequence.splice(startIndex, elementsToRemove);
+    }
+    let finalResult = sequence.reduce((a,b) => {
+        return a + b
+    },0);
+    console.log(finalResult);
+  }
