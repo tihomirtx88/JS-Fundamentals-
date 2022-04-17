@@ -1,0 +1,10 @@
+function solve(text){
+  let obj = JSON.parse(text);
+
+  let objEnteries = Object.entries(obj);
+  for (let [key, velue] of objEnteries ) {
+      console.log(`${key}: ${velue}`);
+  }
+}
+
+solve('{"name": "George", "age": 40, "town": "Sofia"}');
