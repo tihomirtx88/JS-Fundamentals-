@@ -1,0 +1,20 @@
+function catCreative(arr){
+    class Cat{
+       constructor(name, age){
+         this.name = name;
+         this.age = age;
+         this.meow = () => console.log(`${this.name}, age ${this.age} says Meow`);
+       }
+    }
+
+    let cats = [];
+
+for (let currentString of arr) {
+    let currentDate = currentString.split(' ');
+    let currentCat = new Cat(currentDate[0], currentDate[1]);
+    cats.push(currentCat);
+}
+
+cats.forEach(c => c.meow());
+}
+
