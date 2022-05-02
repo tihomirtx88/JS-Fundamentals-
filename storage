@@ -1,0 +1,29 @@
+function solve(input) {
+    let storage = new Map();
+    for (let item of input) {
+        item = item.split(` `);
+        let name = item[0];
+        let quantity = Number(item[1]);
+
+        if (storage.has(name)) {
+            let newQuantity = storage.get(name) + quantity
+            storage.set(name, newQuantity);
+        }
+        else {
+            storage.set(name, quantity);
+        }
+
+    }
+    
+    for (let storageElement of storage) {
+        console.log(`${storageElement[0]} -> ${storageElement[1]}`);
+    }
+
+}
+
+solve(['tomatoes 10',
+    'coffee 5',
+    'olives 100',
+    'coffee 40']
+
+);
