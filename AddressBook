@@ -1,0 +1,25 @@
+
+function solve(input) {
+    let adressbook = {};
+    for (let line of input) {
+        let tokens = line.split(`:`);
+        let name = tokens[0];
+        let number = tokens[1];
+        adressbook[name] = number;
+    }
+
+    let sortedAdreesBook = Object.entries(adressbook);
+    sortedAdreesBook.sort((a,b) => {
+       return a[0].localeCompare(b[0])
+    });
+
+    for (let element of sortedAdreesBook) {
+        console.log(`${element[0]} -> ${element[1]}`);
+    }
+}
+
+solve(['Tim:Doe Crossing',
+    'Bill:Nelson Place',
+    'Peter:Carlyle Ave',
+    'Bill:Ornery Rd']
+);
