@@ -1,0 +1,32 @@
+function solve(text) {
+    let result = [];
+    for (let word of text.split(` `)) {
+        if (word.length !== 1 && word[0] === `#`) {
+            result.push(word.substring(1));
+        }
+    }
+
+    let finalREsult = [];
+
+
+    for (let item of result) {
+        let separateChar = item.split(` `);
+        let flag = true;
+        for (let i = 0; i < separateChar.length; i++) {
+            let currentCode = separateChar[i].charCodeAt(0);
+            if ((currentCode < 97 || currentCode > 122)
+                && (currentCode < 65 || currentCode > 90)) {
+                flag = false;
+            }
+        }
+        if (flag) {
+            finalREsult.push(item);
+        }
+
+    }
+
+
+    finalREsult.forEach(el => console.log(el));
+}
+
+solve(`Nowadays everyone uses # to tag a #special word in #socialMedia`);
