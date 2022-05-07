@@ -1,0 +1,21 @@
+function solve(text) {
+    let firstPart = text
+        .substring(0, text.length / 2)
+        .split(``)
+        .reverse()
+        .join(``);
+
+    let secoundPart = text
+        .substring(text.length / 2)
+        .split(``)
+        .reverse()
+        .join(``);
+
+    console.log(firstPart);
+    console.log(secoundPart);
+
+}
+
+
+solve('tluciffiDsIsihTgnizamAoSsIsihT'
+);
